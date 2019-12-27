@@ -1,6 +1,6 @@
 <?php
 // Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+require "./config/mysql.php";
 public function add_employee($name, $designation, $dob, $address, $official_no, $personal_no, $email)
 {
   $sql = "INSERT INTO employee
