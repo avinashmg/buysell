@@ -12,7 +12,7 @@ function page_title(){
     return $pages[$_GET['v']];
   }
   else{
-    return default;
+    return "";
   }
 }
 function content(){
@@ -25,6 +25,9 @@ function content(){
     ];
     include "view/".$views[$_GET['v']];
 
+  }
+  else{
+    return "";
   }
 }
  ?>
