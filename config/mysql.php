@@ -1,8 +1,6 @@
 <?php
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = new mysqli("localhost", "buysell", "&bjF6!SRvDY53An", "buysell");
 // Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
