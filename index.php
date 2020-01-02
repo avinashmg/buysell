@@ -1,23 +1,31 @@
 <?php
 function page_title(){
-  $pages = [
-    "tracksalesofficers" => "Track Sales Officers ",
-    "employee" => "Employee",
-    "event" => "Events",
-    "customer" => "Customer",
-    "lead" => "Lead Details",
-    "viewreport" => "View Reports"
-  ];
-  return $pages[$_GET['v']];
+  if($_GET['v']){
+    $pages = [
+      "tracksalesofficers" => "Track Sales Officers ",
+      "employee" => "Employee",
+      "event" => "Events",
+      "customer" => "Customer",
+      "lead" => "Lead Details",
+      "viewreport" => "View Reports"
+    ];
+    return $pages[$_GET['v']];
+  }
+  else{
+    return default;
+  }
 }
 function content(){
-  $views=[
-    "employee"=> "employee.php",
-    "lead"=> "lead.php",
-    "customer"=> "customer.php",
-    "event"=> "event.php"
-  ];
-  include "view/".$views[$_GET['v']];
+  if($_GET['v']){
+    $views=[
+      "employee"=> "employee.php",
+      "lead"=> "lead.php",
+      "customer"=> "customer.php",
+      "event"=> "event.php"
+    ];
+    include "view/".$views[$_GET['v']];
+
+  }
 }
  ?>
 <!DOCTYPE html>
